@@ -36,6 +36,8 @@ Prices are integer minor units (paise) in `INR`. Checkout locks each product row
 
 ## Run locally
 
+Day-to-day commands, production variables, and hosting options are in [INSTRUCTIONS.md](INSTRUCTIONS.md).
+
 PostgreSQL 16, Java 21, Node 22.
 
 ```bash
