@@ -1,0 +1,22 @@
+# Local development only. Never use this profile in production.
+app:
+  jwt:
+    secret: "bGV0c2J1eS1sb2NhbC1kZXYtc2VjcmV0LWtleSEhISE="
+  auth:
+    require-email-verification: false
+    cookie-secure: false
+    log-email-tokens: true
+    public-base-url: http://localhost:5173
+  cors:
+    allowed-origins:
+      - http://localhost:5173
+      - http://127.0.0.1:5173
+  seed:
+    enabled: true
+    admin-email: admin@letsbuy.dev
+    admin-password: Local-Admin-1
+    catalog: true
+
+springdoc:
+  swagger-ui:
+    enabled: true

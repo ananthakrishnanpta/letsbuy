@@ -1,0 +1,30 @@
+spring:
+  datasource:
+    url: jdbc:h2:mem:letsbuy;MODE=PostgreSQL;DB_CLOSE_DELAY=-1;DATABASE_TO_LOWER=TRUE
+    driver-class-name: org.h2.Driver
+    username: sa
+    password:
+  jpa:
+    hibernate:
+      ddl-auto: create-drop
+    open-in-view: false
+  flyway:
+    enabled: false
+
+app:
+  jwt:
+    secret: "bGV0c2J1eS1sb2NhbC1kZXYtc2VjcmV0LWtleSEhISE="
+    access-token-ttl: 15m
+    refresh-token-ttl: 14d
+  auth:
+    require-email-verification: false
+    cookie-secure: false
+    log-email-tokens: false
+    max-failed-logins: 5
+    lock-duration: 15m
+    public-base-url: http://localhost:5173
+  cors:
+    allowed-origins: []
+  seed:
+    enabled: false
+    catalog: false
