@@ -1,0 +1,19 @@
+services:
+  postgres:
+    image: postgres:16-alpine
+    environment:
+      POSTGRES_DB: letsbuy
+      POSTGRES_USER: letsbuy
+      POSTGRES_PASSWORD: letsbuy
+    ports:
+      - "5432:5432"
+    volumes:
+      - letsbuy-pg:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U letsbuy -d letsbuy"]
+      interval: 5s
+      timeout: 5s
+      retries: 12
+
+volumes:
+  letsbuy-pg:
